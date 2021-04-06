@@ -97,8 +97,9 @@ a:visited {
   margin-bottom: 2rem;
 }
 
-.item__panther {
+.item__emoji {
   display: flex;
+  font-size: 25px;
 }
 
 .item__date {
@@ -106,7 +107,16 @@ a:visited {
   align-self: flex-start;
   color: var(--yellow);
   font-weight: var(--font-weight-bold);
-  font-size: 1.2rem;
+  font-size: 1rem;
+  margin: auto 0;
+}
+
+.item__title {
+  color: var(--yellow);
+  font-weight: var(--font-weight-normal);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  line-height: 1.4;
 }
 
 .item__img {

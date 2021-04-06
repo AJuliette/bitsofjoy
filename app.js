@@ -17,7 +17,8 @@ const query = `{
         height
         description
       }
-      panther
+      emoji
+      title
       link
       linkText
     }
@@ -83,9 +84,10 @@ const itemClassNames = {
   container: "item__container",
   topRow: "item__topRow",
   date: "item__date",
+  title: "item__title",
   img: "item__img",
   link: "item__link",
-  panther: "item__panther",
+  emoji: "item__emoji",
   text: "item__text",
 };
 
@@ -98,13 +100,10 @@ const renderItems = (items) => {
     const newTopRow = document.createElement("div");
     newTopRow.className = itemClassNames.topRow;
 
-    const newPantherEl = document.createElement("img");
-    newPantherEl.src = `./panthers/${item.panther}.svg`;
-    newPantherEl.alt = `${item.panther} panther emote`;
-    newPantherEl.setAttribute("width", "50");
-    newPantherEl.setAttribute("height", "50");
-    newPantherEl.className = itemClassNames.panther;
-    newTopRow.appendChild(newPantherEl);
+    const newEmojiEl = document.createElement("p");
+    newEmojiEl.innerText = item.emoji;
+    newEmojiEl.className = itemClassNames.emoji;
+    newTopRow.appendChild(newEmojiEl);
 
     const newDateEl = document.createElement("time");
     newDateEl.setAttribute("datetime", formatPublishedDateForDateTime(item.sys.firstPublishedAt));
@@ -113,6 +112,13 @@ const renderItems = (items) => {
     newTopRow.appendChild(newDateEl);
 
     newItemEl.appendChild(newTopRow);
+
+    if (item.title) {
+      const newTitlEl = document.createElement("h2");
+      newTitlEl.innerText = item.title;
+      newTitlEl.className = itemClassNames.title;
+      newItemEl.appendChild(newTitlEl);
+    }
 
     if (item.image) {
       const newImgEl = document.createElement("img");
@@ -125,7 +131,7 @@ const renderItems = (items) => {
     }
 
     if (item.text) {
-      const newTextEl = document.createElement("h2");
+      const newTextEl = document.createElement("h3");
       newTextEl.innerText = item.text;
       newTextEl.className = itemClassNames.text;
       newItemEl.appendChild(newTextEl);

@@ -122,9 +122,9 @@
           "omitted": false
         },
         {
-          "id": "panther",
-          "name": "Panther",
-          "type": "Symbol",
+          "id": "emoji",
+          "name": "Emoji",
+          "type": "Text",
           "localized": false,
           "required": false,
           "validations": [
@@ -218,7 +218,7 @@
           "widgetNamespace": "builtin"
         },
         {
-          "fieldId": "panther",
+          "fieldId": "emoji",
           "widgetId": "radio",
           "widgetNamespace": "builtin"
         }
@@ -284,7 +284,7 @@
         "text": {
           "en-US": "I just imported this content with the Contentful CLI! 🎉"
         },
-        "panther": {
+        "emoji": {
           "en-US": "heart"
         }
       }

@@ -10,6 +10,7 @@ async function getPosts() {
             firstPublishedAt
             id
           }
+          title
           text
           link
           linkText
@@ -69,9 +70,9 @@ function buildRssItems(items) {
         <item>
         <title>${title}</title>
         <description>${description}</description>
-        <author>whitep4nth3r@gmail.com (whitep4nth3r)</author>
-        <link>https://thingoftheday.xyz#${item.sys.id}</link>
-        <guid>https://thingoftheday.xyz#${item.sys.id}</guid>
+        <author>ajuliette.dev@gmail.com (AJuliette)</author>
+        <link>https://bitsofjoy.dev#${item.sys.id}</link>
+        <guid>https://bitsofjoy.dev#${item.sys.id}</guid>
         <pubDate>${item.sys.firstPublishedAt}</pubDate>
         </item>
         `;
@@ -83,10 +84,10 @@ exports.handler = async function (event, context) {
   const rssFeed = `<?xml version="1.0"?>
   <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>thingoftheday.xyz</title>
-    <atom:link href="https://thingoftheday.xyz/.netlify/functions/rss" rel="self" type="application/rss+xml" />
-    <link>https://thingoftheday.xyz</link>
-    <description>thingoftheday is a lightweight microblogging site powered by Contentful and vanilla HTML, CSS and JavaScript.</description>
+    <title>bitsofjoy.dev</title>
+    <atom:link href="https://bitsofjoy.dev/.netlify/functions/rss" rel="self" type="application/rss+xml" />
+    <link>https://bitsofjoy.dev</link>
+    <description>bitsofjoy is a thread of programming projects that spark joy. Curated by @ajuliette_dev.</description>
     ${buildRssItems(await getPosts())}
   </channel>
   </rss>`;

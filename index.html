@@ -2,44 +2,35 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>thingoftheday by @whitep4nth3r</title>
+    <title>bitsofjoy</title>
     <meta
       name="description"
-      content="thingoftheday is a lightweight microblogging site powered by Contentful and vanilla HTML, CSS and JavaScript. Built by @whitep4nth3r."
+      content="bitsofjoy is a thread of programming projects that spark joy. Curated by @ajuliette_dev."
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link
-      rel="alternate"
-      type="application/rss+xml"
-      title="RSS Feed for thingoftheday.xyz"
-      href="https://thingoftheday.xyz/.netlify/functions/rss"
-    />
-
     <!-- Fb/Default OG Meta Tags -->
-    <meta property="og:url" content="https://thingoftheday.xyz" />
+    <meta property="og:url" content="https://bitsofjoy.dev" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="thingoftheday by @whitep4nth3r" />
+    <meta property="og:title" content="bitsofjoy by @ajuliette_dev" />
     <meta
       property="og:description"
-      content="thingoftheday is a lightweight microblogging site powered by Contentful and vanilla HTML, CSS and JavaScript. Built by @whitep4nth3r."
+      content="bitsofjoy is a thread of programming projects that spark joy. Curated by @ajuliette_dev."
     />
-    <meta property="og:image" content="https://thingoftheday.netlify.app/assets/fb_og.png" />
+    <meta property="og:image" content="https://bitsofjoy.netlify.app/assets/fb_og.png" />
 
     <!-- Twitter OG Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta property="twitter:domain" content="thingoftheday.xyz" />
-    <meta property="twitter:url" content="https://thingoftheday.xyz" />
-    <meta name="twitter:title" content="thingoftheday by @whitep4nth3r" />
+    <meta property="twitter:domain" content="bitsofjoy.dev" />
+    <meta property="twitter:url" content="https://bitsofjoy.dev" />
+    <meta name="twitter:title" content="bitsofjoy by @ajuliette_dev" />
     <meta
       name="twitter:description"
-      content="thingoftheday is a lightweight microblogging site powered by Contentful and vanilla HTML, CSS and JavaScript. Built by @whitep4nth3r."
+      content="bitsofjoy is a thread of programming projects that spark joy. Built by @ajuliette_dev."
     />
-    <meta name="twitter:image" content="https://thingoftheday.netlify.app/assets/twitter_og.png" />
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
 
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="msapplication-TileColor" content="#f11012" />
@@ -51,23 +42,30 @@
   <body>
     <main class="container">
       <header>
-        <h1 class="microblog__title">thingoftheday.xyz</h1>
+        <h1 class="microblog__title">bitsofjoy.dev</h1>
         <p class="microblog__description">
-          thingoftheday is a lightweight microblogging site powered by Contentful and vanilla HTML,
-          CSS and JavaScript.
+          bitsofjoy is a thread of programming projects that spark joy.
         </p>
-        <a
-          href="https://github.com/whitep4nth3r/thingoftheday"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="microblog__link"
-          >View code on GitHub</a
-        >
       </header>
       <section data-items></section>
     </main>
     <footer class="footer">
       &copy; <span data-footer-year></span>
+      <a
+      href="https://twitter.com/ajuliette_dev"
+      class="footer__link"
+      target="_blank"
+      rel="noreferrer noopener"
+      >@ajuliette_dev</a
+      >
+      <span>| Forked from</span>
+      <a
+        href="https://github.com/whitep4nth3r/thingoftheday"
+        class="footer__link"
+        target="_blank"
+        rel="noreferrer noopener"
+      >thingoftheday</a>
+      <span> by </span>
       <a
         href="https://twitter.com/whitep4nth3r"
         class="footer__link"
